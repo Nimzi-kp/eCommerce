@@ -1,0 +1,40 @@
+<script src="/javascripts/validate.js"></script>
+<div class="container">
+    <section class="vh-100">
+        <div class="py-5 h-100">
+            <div class="text-center">
+                <img src="https://i.postimg.cc/Vkrfpg7G/adminlogo.jpg" class="img-fluid" style="width:auto;max-height:8rem">
+            </div>
+            <div class="row mx-auto justify-content-center p-2" style="border:2px solid black; border-radius:50px">
+                <div class="col-md-6 col-lg-6 col-xl-6 pt-5">
+                    <form onsubmit="return loginValidate()" action="/admin/adminlogin" method="post" class="border-dark">
+                        <h1 class="pb-3">Admin Login</h1>
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <div class="error" id="lEmailErr"></div>
+                            <input type="text" id="lEmail" name="email" class="form-control form-control-lg border-dark"
+                                placeholder="Email address" required />
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <div class="error" id="lPassErr"></div>
+                            <input type="password" id="lPassword" name="password"
+                                class="form-control form-control-lg border-dark" placeholder="Password" required />
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-success btn-lg btn-block w-100 border-dark">Login</button>
+                        <h6 class="text-danger p-3 text-center pb-5">{{loginErr}}</h6>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<style>
+    .error {
+        color: rgb(255, 36, 36);
+    }
+</style>
+<script src="https://kit.fontawesome.com/c9a477b534.js" crossorigin="anonymous"></script>

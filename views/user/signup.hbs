@@ -1,0 +1,49 @@
+<div class="row">F
+    <div class="container">
+        <div class="col-md-6 float-start p-5">
+            <div class="d-flex align-items-center pe-5 pb-5 ps-5">
+                <div class="">
+                    <img src="https://i.postimg.cc/VksnsV64/logo.png" class="img-fluid" alt="Phone image">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 float-start p-5 mt-5">
+            <div>
+                <h2 class="text-center">Create new account</h2>
+                <form onsubmit="return signupValidate()" action="/signup" method="post">
+                    <div class="form-group ms-5 me-5 mt-3">
+                        <input type="text" id="name" name="Name" class="form-control border-2 border-dark" placeholder="Name" >
+                        <div class="error" id="nameErr"></div>
+                    </div>
+                    <div class="form-group ms-5 me-5 mt-3">
+                        <input type="text" id="mobile" class="form-control border-2 border-dark" name="Mobile" placeholder="Phone No" >
+                        <div class="error" id="mobileErr"></div>
+                    </div>
+                    <div class="form-group ms-5 me-5 mt-3">
+                        <input type="email" id="email" class="form-control border-2 border-dark" name="Email" placeholder="Email address" >
+                        <div class="error" id="emailErr"></div>
+                    </div>
+                    <div class="form-group ms-5 me-5 mt-3">
+                        <input type="password" id="password" name="Password" class="form-control border-2 border-dark" placeholder="Password" >
+                        <div class="error" id="passErr"></div>
+                    </div>
+                    <div class="form-group ms-5 me-5 mt-3">
+                        <input type="password" id="conformPassword" name="ConformPassword" class="form-control border-2 border-dark" placeholder="Confirm Password"
+                            >
+                        <div class="error" id="conpasErr"></div>
+                    </div>
+                    <div class="ms-5 me-5 mt-3"><p class="text-center">Aldready have a account<a href="/login" class="m-3">click hear</a></p></div>
+                    <div class="d-grid"><button type="submit" class="btn btn-success ms-5 me-5">Signup</button></div>
+                    <input type="text" hidden value="false" name="admin">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/javascripts/validate.js"></script>
+
+<style>
+    .error{
+        color: red;
+    }
+</style>

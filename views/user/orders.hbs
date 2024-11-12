@@ -1,0 +1,45 @@
+<section>
+    <div class="border border-black border-2 rounded rounded-5 m-5">
+        <div class="pt-5 pe-5 ps-5">
+            <div class="p-3 border-bottom border-black">
+                <h2><b>Orders</b></h2>
+            </div>
+        </div>
+
+        <div class="">
+            {{#each orders}}
+            <div class="row ms-5 me-5 p-3 border-bottom border-black">
+                <div class="col-md-2 col-6">
+                    <h6>Date</h6>
+                    <p>{{this.date}}</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <h6>Order Id</h6>
+                    <p>{{this.id}}</p>
+                </div>
+                <div class="col-md-2 col-6">
+                    <h6>Status</h6>
+                    <p>{{this.status}}</p>
+                </div>
+                <div class="col-md-2 col-6">
+                    <h6>Amount</h6>
+                    <p>{{this.amount}}</p>
+                </div>
+                <div class="col-md-3 col-12 pt-2 text-cente d-grid d-md-block">
+                    <a href="/order-details/{{this._id}}" class="btn btn-primary ps-5 pe-5">Details</a>
+                </div>
+            </div>
+            {{else}}
+            <div class="row ms-5 me-5 p-3 ">
+                <div class="col-12">
+                    <h5><b>You have no orders!</b></h5>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+        <div class="p-5">
+            <h6><a href="/" class="text-black">Back to store</a></h6>
+        </div>
+    </div>
+</section>
